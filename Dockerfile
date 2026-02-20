@@ -33,7 +33,7 @@ RUN set -eux; \
     sed -i -E 's/"openclaw"[[:space:]]*:[[:space:]]*"workspace:[^"]+"/"openclaw": "*"/g' "$f"; \
   done
 
-ENV NODE_OPTIONS="--max-old-space-size=8192"
+ENV NODE_OPTIONS="--max-old-space-size=4096"
 
 RUN pnpm install --no-frozen-lockfile
 RUN pnpm build
